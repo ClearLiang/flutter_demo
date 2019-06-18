@@ -1,0 +1,43 @@
+import 'package:vp_flutter/pages/eachView.dart';
+
+const widgetNameList = [
+  "CupertinoActivityIndicator",
+  "CupertinoAlertDialog",
+  "CupertinoButton",
+  "CupertinoDialog",
+  "CupertinoDialogAction",
+  "CupertinoFullscreenDialogTransition",
+  "CupertinoNavigationBar",
+  "CupertinoPageScaffold",
+  "CupertinoPageTransition",
+  "CupertinoSlider",
+  "CupertinoSwitch",
+  "CupertinoTabBar",
+  "CupertinoTabScaffold",
+  "CupertinoTabView",
+  "CustomMultiChildLayout",
+  "CustomPaint",
+  "CustomScrollView",
+  "CustomSingleChildLayout",
+];
+
+var widgetList = [
+  EachView("Empty Demo", true),
+  EachView("Empty Demo", true),
+  EachView("Empty Demo", true),
+  EachView("Empty Demo", true),
+  EachView("Empty Demo", true),
+  EachView("Empty Demo", true),
+  EachView("Empty Demo", true),
+  EachView("Empty Demo", true),
+  EachView("Empty Demo", true),
+  EachView("Empty Demo", true),
+  EachView("Empty Demo", true),
+  EachView("Empty Demo", true),
+  EachView("Empty Demo", true),
+  EachView("Empty Demo", true),
+  EachView("Empty Demo", true),
+  EachView("Empty Demo", true),
+  EachView("Empty Demo", true),
+  EachView("Empty Demo", true),
+];

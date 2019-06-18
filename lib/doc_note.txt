@@ -1,0 +1,17 @@
+
+生命周期：
+显示 ==> 构造函数 => initState => didChangeDependencies
+关闭 ==> deactivate => dispose
+
+
+1. 一般情况下，组件的动态数据添加都是通过builder的创建方式实现的
+
+2. StatefulBuilder 进行 Widget 自定义开发
+
+3. Flutter的Future异步详解
+
+4. Flutter 动画使用
+
+5. 有时候context会有问题，可以把嵌套的控件封装出去
+
+6. 列表添加数据或者赋值，采用 add 或 addAll 的方式，尽量不要用 = 形式
