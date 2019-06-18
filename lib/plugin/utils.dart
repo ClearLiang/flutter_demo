@@ -8,6 +8,10 @@ class Utils {
   static showLog(String msg){
     _Log.show(msg);
   }
+
+  static transformJson2Map(String jsonString){
+    _Json2Map.show(jsonString);
+  }
 }
 
 class _Toast {
@@ -97,3 +101,11 @@ class _Log{
   }
 
 }
+
+class _Json2Map{
+
+  static void show(String jsonString){
+
+  }
+}
+

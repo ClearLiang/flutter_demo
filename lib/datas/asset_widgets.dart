@@ -1,5 +1,5 @@
 import 'package:vp_flutter/pages/eachView.dart';
-import 'package:vp_flutter/widgets/demo_Form.dart';
+import 'package:vp_flutter/widgets/demo_form.dart';
 import 'package:vp_flutter/widgets/demo_align.dart';
 import 'package:vp_flutter/widgets/demo_appbar.dart';
 import 'package:vp_flutter/widgets/demo_aspectRatio.dart';
@@ -30,8 +30,10 @@ import 'package:vp_flutter/widgets/demo_fittedBox.dart';
 import 'package:vp_flutter/widgets/demo_flow.dart';
 import 'package:vp_flutter/widgets/demo_flutterLogo.dart';
 import 'package:vp_flutter/widgets/demo_futureBuilder.dart';
+import 'package:vp_flutter/widgets/test_demo.dart';
 
 const widgetNameList = [
+  "TestDemo",
   "Align",
   "AppBar",
   "AspectRatio",
@@ -66,6 +68,7 @@ const widgetNameList = [
 ];
 
 var widgetList = [
+  TestDemo(),
   AlignDemo(),
   AppbarDemo(),
   AspectRatioDemo(),
