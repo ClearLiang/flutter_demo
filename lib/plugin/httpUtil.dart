@@ -1,7 +1,9 @@
 import 'dart:convert';
 import 'dart:io';
 
+import 'package:cookie_jar/cookie_jar.dart';
 import 'package:dio/dio.dart';
+import 'package:path_provider/path_provider.dart';
 import 'package:vp_flutter/api/apis.dart';
 import 'package:vp_flutter/entity_factory.dart';
 
@@ -65,6 +67,25 @@ class HttpUtil {
           contentType: ContentType('application', 'json', charset: 'utf-8'));
       Dio dio = new Dio(options);
 
+//      Directory tempDir = await getTemporaryDirectory();//获取内存路径
+//      String tempPath = tempDir.path;
+//      print("tempPath:$tempPath");
+//      Directory appDocDir = await getApplicationDocumentsDirectory();//获取app路径
+//      String appDocPath = appDocDir.path;
+//      appDocPath = appDocPath+"/lib/api";
+//      print("appDocPath:$appDocPath");
+//      dio.interceptors.add(CookieManager(PersistCookieJar(dir:appDocPath)));
+      //dio.interceptors.add(LogInterceptor(responseBody: false)); //开启请求日志
+
+
+//      List<Cookie> cookies = [];
+//      var cj = new PersistCookieJar();
+//      //Save cookies
+//      cj.saveFromResponse(Uri.parse(url), cookies);
+//      //Get cookies
+//      List<Cookie> results = cj.loadForRequest(Uri.parse(url));
+//      print(results);
+
       if (method == GET) {
         response = await dio.get(url, queryParameters: params);
       } else {
@@ -80,6 +101,13 @@ class HttpUtil {
 
       if (successCallBack != null) {
         //print(response.statusCode);
+//        var cookieJar = new PersistCookieJar(dir: appDocPath);
+//        List<Cookie> cookies = [];
+//        cookieJar.saveFromResponse(Uri.parse(url), cookies);
+//        cookies.forEach((cookie){
+//          print("cookie:"+cookie.name);
+//        });
+
         T result = EntityFactory.generateOBJ(JsonCodec().decode(response.data));
         successCallBack(result);
       }

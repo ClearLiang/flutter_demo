@@ -57,7 +57,7 @@ class _MyHomeState extends State<MyHome> {
                 Api.movieUrl,
                 (MovieEntity result) {
                   result.movies.forEach((movie) {
-                    print(movie.title);
+                    print(movie.releaseDates.theater);
                   });
                 },
                 errorCallBack: (errorMsg) {
