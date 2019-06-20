@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:vp_flutter/api/apis.dart';
 import 'package:vp_flutter/beans/movie_entity.dart';
 import 'package:vp_flutter/beans/user1_entity.dart';
+import 'package:vp_flutter/beans/user_entity.dart';
 import 'package:vp_flutter/plugin/httpUtil.dart';
 
 class TestDemo extends StatefulWidget {
@@ -66,6 +67,20 @@ class _MyHomeState extends State<MyHome> {
               );
             },
             child: Text("电影数据"),
+          ),
+          RaisedButton(
+            onPressed: () {
+              HttpUtil.getInstance().get<UserEntity>(
+                Api.userUrl,
+                (UserEntity result) {
+                  print("name:${result.name},email:${result.email}");
+                },
+                errorCallBack: (errorMsg) {
+                  print(errorMsg);
+                },
+              );
+            },
+            child: Text("User数据"),
           ),
           Text(result),
         ],
