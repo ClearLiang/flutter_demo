@@ -1,12 +1,12 @@
 import 'dart:convert';
 import 'dart:io';
+
 import 'package:dio/dio.dart';
 import 'package:vp_flutter/api/apis.dart';
-import 'package:vp_flutter/beans/movie_entity.dart';
 import 'package:vp_flutter/entity_factory.dart';
 
 /// 网络请求
-///
+/// dio 网络框架
 /// 注意事项，一定要写 T 的类型
 /// T 的具体Bean类型一定要先写
 ///
@@ -62,8 +62,7 @@ class HttpUtil {
           baseUrl: Api.baseUrl,
           responseType: ResponseType.json,
           // dio库中默认将请求数据序列化为json，此处可根据后台情况自行修改
-          contentType:
-              new ContentType('application', 'json', charset: 'utf-8'));
+          contentType: ContentType('application', 'json', charset: 'utf-8'));
       Dio dio = new Dio(options);
 
       if (method == GET) {
